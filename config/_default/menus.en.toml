@@ -1,0 +1,63 @@
+############## navigation ##############
+
+ [[main]]
+ name = "主页"
+ url = "/"
+ weight = 1
+ 
+ [[main]]
+ name = "活动"
+ weight = 2
+
+  [[main]]
+ parent = "活动"
+ name = "Act1"
+ url = "/act1/"
+   
+ [[main]]
+ parent = "活动"
+ name = "Act2"
+ url = "/act2/"
+   
+ [[main]]
+ parent = "活动"
+ name = "Act3"
+ url = "/act3/"
+ 
+ [[main]]
+ name = "归档"
+ weight = 3
+
+ [[main]]
+ parent = "归档"
+ name = "Doc1"
+ url = "/doc1"
+  [[main]]
+ parent = "归档"
+ name = "Doc2"
+ url = "/doc2"
+  [[main]]
+ parent = "归档"
+ name = "Doc3"
+ url = "/doc3"
+
+ [[main]]
+ name = "关于我们"
+ url = "/about"
+ weight = 4
+
+## footer menu
+ [[footer]]
+ name = "关于我们"
+ url = "/about"
+ weight = 1
+
+ [[footer]]
+ name = "主页"
+ url = "/"
+ weight = 2
+
+ [[footer]]
+ name = "Privacy Policy"
+ url = "/privacy-policy"
+ weight = 3

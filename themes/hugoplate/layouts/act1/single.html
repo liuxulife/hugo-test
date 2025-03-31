@@ -1,0 +1,33 @@
+{{ define "main" }}
+  {{ partial "page-header" . }}
+
+  <section class="section-sm pb-0">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="md:col-10 lg:col-8">
+          <!-- 渲染图片 -->
+          {{ with .Params.image }}
+            <img src="{{ . }}" alt="{{ $.Title }}" class="rounded-lg mb-6" />
+          {{ end }}
+          <!-- 渲染内容 -->
+          <div class="content mt-8">
+            {{ .Content }}
+          </div>
+          <!-- 渲染分享组件 -->
+          {{ with .Params.social }}
+            <div class="mt-8">
+              <p>分享此页面：</p>
+              <ul>
+                {{ range . }}
+                  <li>
+                    <a href="{{ .link }}" target="_blank">{{ .name }}</a>
+                  </li>
+                {{ end }}
+              </ul>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}
